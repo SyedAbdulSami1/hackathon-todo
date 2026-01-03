@@ -24,3 +24,12 @@ class TodoManager:
         self.tasks.append(task)
         self.next_id += 1
         return task
+
+    def list_tasks(self) -> List[Task]:
+        """
+        Returns the list of all tasks.
+
+        Returns:
+            A list of all Task objects.
+        """
+        return self.tasks

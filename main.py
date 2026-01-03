@@ -29,9 +29,19 @@ def main():
             print(f"Success: Task '{task.title}' added.")
 
         elif choice == '2':
-            # To be implemented in a future feature
-            print("List tasks functionality will be implemented soon.")
-            pass
+            tasks = todo_manager.list_tasks()
+            if not tasks:
+                print("No tasks in the list.")
+            else:
+                print("\n--- Your To-Do List ---")
+                for task in tasks:
+                    status = "Complete" if task.completed else "Incomplete"
+                    print(f"ID: {task.id}")
+                    print(f"  Title: {task.title}")
+                    print(f"  Description: {task.description}")
+                    print(f"  Status: {status}")
+                    print("-" * 20)
+
         elif choice == '3':
             # To be implemented in a future feature
             print("Mark task functionality will be implemented soon.")
